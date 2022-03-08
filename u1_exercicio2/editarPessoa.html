@@ -1,10 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt_br">
 <head>
-    <title>PWeb - by Xico Arruda</title>
+    <meta charset="utf-8">
+    <title>Editar Pessoa</title>
+    <link rel = "stylesheet" href="style/style.css">
+
 </head>
 
 <body>
+    <a href="index.html"><button class="botao">Início</button></a>
+    <a href="adicionarPessoa.html" class=botao>Adicionar pessoa</a>
+    <a href="listarPessoas.html" class=botao>Listar pessoas</a>
+    <a href="noticias.html" class=botao>Canais de noticias</a>
+    <a href="contato.html" class=botao>Mande um Email</a>
+    <a href="sobre.html" class=botao>Sobre o site</a>
+
+    <div>
+        <h1 id="titulo">Formulário para edição de pessoas:</h1>
+    </div>
+
+    <!-- Formulário -->
+
+    <form>
+        <!-- Nome completo-->
+        <div class="campo">
+            <label for="nome">Nome completo*:</label>
+            <input type="text" name="nome" id="nome" placeholder="Seu nome completo" required>
+        </div>
+
+        <!-- Data de nascimento -->
+        <div>
+            <label>Data de nascimento*:</label>
+            <input type="date" name="data" id="data" required>
+        </div>
+
+        <!-- Email -->
+        <div>
+            <label class="campo">Email*:</label>
+            <input type="email" name="email" id="email" placeholder="exemplo@email.com" required>
+        </div>
+        
+        <!-- Sexo -->
+        <div>
+            <label>Sexo*:</label>
+                <br>
+            <label>
+                <input type="radio" name="sexo" value="masculino">Masculino
+                <br>
+            </label>
+            <label>
+                <input type="radio" name="sexo" value="feminino">Feminino
+                <br>
+            </label>
+            <label>
+                <input type="radio" name="sexo" value="nãoInformar">Não informar
+            </label>
+        </div>
+
+    <a href="adicionarPessoa.html">Limpar</a>
+    <a href="adicionadacomSucesso.html" button>Cadastrar!</a>
+
+    <div>
+        <label>*Campo obrigatório</label>
+    </div>
+
+</form>
 
 </body>
 
