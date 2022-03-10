@@ -100,3 +100,32 @@ section{
   top: 70px;
   left: 12px;
 }
+
+.news{
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  left: 18px;
+}
+
+.list{
+  position: relative;
+  top: 30px;
+  left: 18px;
+
+}
+
+.tabela{
+  position: relative;
+  top: 50px;
+  left: 20px;
+  border: 1px none;
+
+}
+
+.tabela td{
+  border: 1px none;
+  padding-bottom: 7px;
+  padding-right: 20px;
+  
+}

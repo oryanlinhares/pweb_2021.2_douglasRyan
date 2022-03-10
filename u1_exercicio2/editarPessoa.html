@@ -9,61 +9,50 @@
 </head>
 
 <body>
-    <a href="index.html"><button class="botao">Início</button></a>
-    <a href="adicionarPessoa.html" class=botao>Adicionar pessoa</a>
-    <a href="listarPessoas.html" class=botao>Listar pessoas</a>
-    <a href="noticias.html" class=botao>Canais de noticias</a>
-    <a href="contato.html" class=botao>Mande um Email</a>
-    <a href="sobre.html" class=botao>Sobre o site</a>
+    <header>
+        <nav class="nav">
+            <a href="index.html" class="botao">Início</a>
+            <a href="adicionarPessoa.html" class="botao">Adicionar pessoa</a>
+            <a href="listarPessoas.html" class="botao">Listar pessoas</a>
+            <a href="noticias.html" class="botao">Canais de notícias</a>
+            <a href="contato.html" class="botao">Mande um E-mail</a>
+            <a href="sobre.html" class="botao -right">Sobre o site</a>
+        </nav>
+    </header>
 
-    <div>
-        <h1 id="titulo">Formulário para edição de pessoas:</h1>
-    </div>
-
-    <!-- Formulário -->
-
-    <form>
-        <!-- Nome completo-->
+    <section>
+        <h1 class="titulo">Formulário para edição de pessoas:</h1>
+        <form>
         <div class="campo">
             <label for="nome">Nome completo*:</label>
             <input type="text" name="nome" id="nome" placeholder="Seu nome completo" required>
         </div>
-
-        <!-- Data de nascimento -->
-        <div>
-            <label>Data de nascimento*:</label>
-            <input type="date" name="data" id="data" required>
+        <div class="campo">
+            <label for="nascimento">Data de nascimento*:</label>
+            <input type="date" name="nascimento" id="nascimento" required>
         </div>
-
-        <!-- Email -->
-        <div>
-            <label class="campo">Email*:</label>
-            <input type="email" name="email" id="email" placeholder="exemplo@email.com" required>
+        <div class="campo">
+            <label for="Email">E-mail*:</label>
+            <input type="email" name="nascimento" id="nascimento" placeholder="exemplo@dominio.com" required>
         </div>
-        
-        <!-- Sexo -->
-        <div>
+        <div class="campo">
             <label>Sexo*:</label>
-                <br>
-            <label>
-                <input type="radio" name="sexo" value="masculino">Masculino
-                <br>
-            </label>
-            <label>
-                <input type="radio" name="sexo" value="feminino">Feminino
-                <br>
-            </label>
-            <label>
-                <input type="radio" name="sexo" value="nãoInformar">Não informar
-            </label>
+            <div class="campo -clear">
+                <input type="radio" id="masculino" name="sexo" required>
+                <label for="masculino">Masculino</label><br>
+                <input type="radio" id="feminino" name="sexo">
+                <label for="masculino">Feminino</label><br>
+                <input type="radio" id="naoInformar" name="sexo">
+                <label for="masculino">Não informar</label>
+            </div>
         </div>
+        <button class="btn" type="reset">Limpar</button>
+        <button class="btn"><a href="/adicionadaComSucesso.html">Editar</a></button>
 
-    <a href="adicionarPessoa.html">Limpar</a>
-    <a href="adicionadacomSucesso.html" button>Cadastrar!</a>
+        <p>*Campo obrigatório</p>
+</form>
 
-    <div>
-        <label>*Campo obrigatório</label>
-    </div>
+</section>
 
 </form>
 
