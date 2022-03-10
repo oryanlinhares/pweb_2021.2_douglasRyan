@@ -5,69 +5,58 @@
     <meta name="viewport" content="width-devic-width, initial-scale=1.0">
     <title>Adicionar Pessoa</title>
     <link rel = "stylesheet" href="style/style.css">
-    <link rel="stylesheet" type="text/css" href="style/style.css" media="">
+    <codigoSecreto="1713125470"></codigoSecreto>
 
 </head>
 
 <body>
+    <header>
+        <nav class="nav">
+            <a href="index.html" class="botao">Início</a>
+            <a href="adicionarPessoa.html" class="botao -active">Adicionar pessoa</a>
+            <a href="listarPessoas.html" class="botao">Listar pessoas</a>
+            <a href="noticias.html" class="botao">Canais de noticias</a>
+            <a href="contato.html" class="botao">Mande um Email</a>
+            <a href="sobre.html" class="botao -right">Sobre o site</a>
+        </nav>
+    </header>
 
-    <a href="index.html"><button class="botao">Início</button></a>
-    <a href="adicionarPessoa.html" class=botao>Adicionar pessoa</a>
-    <a href="listarPessoas.html" class=botao>Listar pessoas</a>
-    <a href="noticias.html" class=botao>Canais de noticias</a>
-    <a href="contato.html" class=botao>Mande um Email</a>
-    <a href="sobre.html" class=botao>Sobre o site</a>
-
-    <div>
-        <h1 id="titulo">Formulário para cadastro de pessoas:</h1>
-    </div>
     
-<!-- Formulário -->
-
-    <form>
-            <!-- Nome completo-->
-            <div class="campo">
-                <label for="nome">Nome completo*:</label>
-                <input type="text" name="nome" id="nome" placeholder="Seu nome completo" required>
-            </div>
-
-            <!-- Data de nascimento -->
-            <div>
-                <label>Data de nascimento*:</label>
-                <input type="date" name="data" id="data" required>
-            </div>
-
-            <!-- Email -->
-            <div>
-                <label class="campo">Email*:</label>
-                <input type="email" name="email" id="email" placeholder="exemplo@email.com" required>
-            </div>
-            
-            <!-- Sexo -->
-            <div>
-                <label>Sexo*:</label>
-                    <br>
-                <label>
-                    <input type="radio" name="sexo" value="masculino">Masculino
-                    <br>
-                </label>
-                <label>
-                    <input type="radio" name="sexo" value="feminino">Feminino
-                    <br>
-                </label>
-                <label>
-                    <input type="radio" name="sexo" value="nãoInformar">Não informar
-                </label>
-            </div>
-
-        <a href="adicionarPessoa.html">Limpar</a>
-        <a href="adicionadacomSucesso.html" button>Cadastrar!</a>
-
-        <div>
-            <label>*Campo obrigatório</label>
+    <!-- Formulário -->
+    <section>
+        <h1 class="titulo">Formulário para cadastro de pessoas:</h1>
+        <form>
+        <!-- Nome completo-->
+        <div class="campo">
+            <label for="nome">Nome completo*:</label>
+            <input type="text" name="nome" id="nome" placeholder="Seu nome completo" required>
         </div>
+        <div class="campo">
+            <label for="nascimento">Data de nascimento*:</label>
+            <input type="date" name="nascimento" id="nascimento" required>
+        </div>
+        <div class="campo">
+            <label for="Email">Email*:</label>
+            <input type="email" name="nascimento" id="nascimento" placeholder="exemplo@dominio.com" required>
+        </div>
+        <div class="campo">
+            <label>Sexo*:</label>
+            <div class="campo -clear">
+                <input type="radio" id="masculino" name="sexo" required>
+                <label for="masculino">Masculino</label><br>
+                <input type="radio" id="feminino" name="sexo">
+                <label for="masculino">Feminino</label><br>
+                <input type="radio" id="naoInformar" name="sexo">
+                <label for="masculino">Não informar</label>
+            </div>
+        </div>
+        <button class="btn" type="reset">Limpar</button>
+        <button class="btn"><a href="/adicionadaComSucesso.html">Cadastrar!</a></button>
 
-    </form>
+        <p>*Campo obrigatório</p>
+</form>
+
+</section>
 
 </body>
 
