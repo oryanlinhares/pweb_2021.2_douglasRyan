@@ -110,24 +110,35 @@ section{
 
 .list{
   position: relative;
-  top: 30px;
-  left: 18px;
+  top: .5rem;
+  left: 1.2rem;
 
 }
 
 .tabela{
-  position: relative;
-  top: 50px;
-  left: 20px;
-  border: 1px none;
-  border-bottom: 1px rgb(0, 0, 0);
+  margin-top: .5rem;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+}
 
+.tabela .row:hover{
+  background-color: #eee;
 }
 
 .tabela td{
-  border: 1px none;
-  padding-bottom: 7px;
-  padding-right: 20px;
-  border-bottom: 1px rgb(0, 0, 0);
-  
+  padding: .3rem;
+  border-collapse: collapse;
+  border-bottom: 1px solid #ddd;
+}
+
+.section{
+  padding-top: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.rowP{
+  font-weight: bold;
+  background-color: #ddd;
 }
