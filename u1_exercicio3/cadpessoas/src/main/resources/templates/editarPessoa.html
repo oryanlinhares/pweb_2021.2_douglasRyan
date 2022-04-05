@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="utf-8">
+    <title>Editar Pessoa</title>
+    <link rel = "stylesheet" href="/style/style.css">
+
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <a href="index.html" class="botao">Início</a>
+            <a href="adicionarPessoa.html" class="botao">Adicionar pessoa</a>
+            <a href="/listarPessoas" class="botao">Listar pessoas</a>
+            <a href="noticias.html" class="botao">Canais de notícias</a>
+            <a href="contato.html" class="botao">Mande um E-mail</a>
+            <a href="sobre.html" class="botao -right">Sobre o site</a>
+        </nav>
+    </header>
+
+    <section>
+        <h1 class="titulo">Formulário para edição de pessoas:</h1>
+        <form th:action="@{/editar/{id}(id=${pessoa.id})}" method="post" th:object="${pessoa}">
+        <div class="campo">
+            <label for="nome">Nome completo*:</label>
+            <input type="text" name="nome" id="nome" placeholder="Seu nome completo" required th:value="*{nome}">
+        </div>
+        <div class="campo">
+            <label for="nascimento">Data de nascimento*:</label>
+            <input type="date" name="nascimento" id="nascimento" required th:field="*{dataNascimento}">
+        </div>
+        <div class="campo">
+            <label for="Email">E-mail*:</label>
+            <input type="email" name="email" id="email" placeholder="exemplo@dominio.com" required th:value="*{email}">
+        </div>
+        <div class="campo">
+            <label>Sexo*:</label>
+            <div class="campo -clear">
+                <input type="radio" id="masculino" name="sexo" required value="Masculino" th:field="*{sexo}">
+                <label for="masculino">Masculino</label><br>
+                <input type="radio" id="feminino" name="sexo" value="Feminino" th:field="*{sexo}">
+                <label for="masculino">Feminino</label><br>
+                <input type="radio" id="naoInformar" name="sexo" value="Não informar" th:field="*{sexo}">
+                <label for="masculino">Não informar</label>
+            </div>
+        </div>
+        <button class="btn" type="reset">Limpar</button>
+        <button class="btn" type="submit">Editar</button>
+
+        <p>*Campo obrigatório</p>
+</form>
+
+</section>
+
+</form>
+
+</body>
+
+</html>

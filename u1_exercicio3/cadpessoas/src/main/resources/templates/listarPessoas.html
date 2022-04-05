@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="utf-8">
+    <title>Lista de Pessoas</title>
+    <link rel="stylesheet" href="style/style.css">
+
+
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <a href="/" class="botao">Início</a>
+            <a href="/adicionarPessoa" class="botao">Adicionar pessoa</a>
+            <a href="/listarPessoas" class="botao -active">Listar pessoas</a>
+            <a href="/public/noticias.html" class="botao">Canais de notícias</a>
+            <a href="/public/contato.html" class="botao">Mande um E-mail</a>
+            <a href="/public/sobre.html" class="botao -right">Sobre o site</a>
+        </nav>
+    </header>
+
+    <section class="section">
+
+        <h1 class="list">Lista de pessoas cadastradas</h1>
+
+        <table class="tabela">
+            <tr class="rowP">
+                <td>Nome completo</td>
+                <td>Data de Nascimento</td>
+                <td>E-mail</td>
+                <td>Sexo</td>
+                <td>Editar</td>
+                <td>Remover</td>
+            </tr>
+
+            <tr class="row" th:each="pessoa : ${listarPessoas}">
+                <td th:text="${pessoa.nome}"></td>
+                <td th:text="${#dates.format(pessoa.dataNascimento, 'dd/mm/yyyy')}"></td>
+                <td><a th:href="'mailto:' + ${pessoa.email}" th:text="${pessoa.email}"></a></td>
+                <td th:text="${pessoa.sexo}"></td>
+                <td><a th:href="@{/editar/{id}(id=${pessoa.id})}">Editar</a></td>
+                <td><a th:href="@{/remover/{id}(id=${pessoa.id})}">Remover</a></td>
+            </tr>
+        </table>
+
+    </section>
+
+</body>
+
+
+</html>
