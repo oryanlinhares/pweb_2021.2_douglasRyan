@@ -1,0 +1,131 @@
+
+
+* {
+    margin: 0;
+}
+
+header{
+    user-select: none;
+}
+
+body{
+    background-color: #F1F1F1;
+}
+
+nav {
+    height: 30px;
+    text-align: right;
+    background-color: #B81118;
+}
+
+.navbtn {
+    text-decoration: none;
+    background: #B81118;
+    padding: 10px;
+    color: white;
+    margin-top: 10px;
+    font-family: "Audiowide", sans-serif;
+}
+
+.navbtn:hover {
+    text-decoration: none;
+    background: #79060c;
+    padding: 10px;
+    color: white;
+    margin-top: 30px;
+    font-family: "Audiowide", sans-serif;
+}
+
+.busca {
+    text-align: center;
+    background-color: #B81118;
+    font-style: italic;
+    font-size: 10px;
+}
+
+.red {
+    background-color: #B81118;
+}
+
+#b {
+    width: 50%;
+}
+
+.nameshop {
+    margin-top: 10%;
+    margin-left: 10px;
+    margin-right: 10%;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: "Sofia", sans-serif;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 6em
+}
+
+.imgProduto {
+    background-color: #FFFFFF;
+    padding: 20px;
+    margin: 20px;
+    border: 1.5px solid rgb(211, 211, 211);
+    box-shadow: rgb(0 0 0 / 14%) 0px 6px 10px;
+    column-gap: 20px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.imgProduto:hover{
+    -webkit-transform: scale(1.2);
+   transform: scale(1.2);
+}
+
+.tabelaPedidos{
+    margin-top: .5rem;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+}
+
+.tabelaPedidos .row:hover{
+    background-color: #eee;
+}
+
+.tabelaPedidos td{
+    padding: .3rem;
+    border-collapse: collapse;
+    border-bottom: 1px solid #ddd;
+}
+
+.rowP{
+    font-weight: bold;
+    background-color: #ddd;
+}
+
+.divPedidos{
+    padding-top: 2.5rem;
+    padding-left: 35rem;
+    padding-right: 35rem;
+}
+
+.divPainel{
+    right: 10px;
+}
+
+.btnPainel{
+    text-decoration: none;
+    background: #B81118;
+    padding: 10px;
+    color: white;
+    margin-top: 10px;
+    font-family: "Audiowide", sans-serif;
+}
+.ul{
+    padding-top: 20px;
+    padding-right: 80px;
+    float: right;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link th:href="@{/style/style.css}" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+
+    <title>Kiton Gomas - Meus Pedidos</title>
+</head>
+
+<body>
+    <header class="cabe">
+
+        <div class="red" style="height:50px">
+            <div>
+                <div style="display:inline;margin-top: 100px;">
+                    <a class="nameshop" href="/">Kiton Gomas</a>
+                </div>
+                    <form style="display:inline" class="busca">
+                        <input id="b" type="text" placeholder="Digite o produto desejado">
+                    </form> 
+                <nav class="nav" style="display:inline">
+                    <a href="/" class="navbtn">Início</a>
+                    <a href="/pedidos" class="navbtn">Pedidos</a>  
+                    <a href="/painel" class="navbtn">Painel ADM</a>          
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="divPedidos">
+        <table class="tabelaPedidos">
+            <tr class="rowP">
+                <td>Nome do produto</td>
+                <td>Quantidade do produto</td>
+                <td>Valor total</td>
+                <td>Forma de pagamento</td>
+            </tr>
+            <tr class="row">
+                <td>Kinder ovo</td>
+                <td>2</td>
+                <td>R$ 11,78</td>
+                <td>PIX</td>
+            </tr>
+            <tr class="row">
+                <td>Pote de Nutella</td>
+                <td>3</td>
+                <td>R$ 52,47</td>
+                <td>Cartão de crédito</td>
+            </tr>
+        </table>
+    </div>
+    
+</body>
+</html>

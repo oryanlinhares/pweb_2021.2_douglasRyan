@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link th:href="@{/style/style.css}" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <title>Kiton Gomas - Painel Administrativo</title>
+</head>
+<body>
+    <header class="cabe">
+
+        <div class="red" style="height:50px">
+            <div>
+                <div style="display:inline;margin-top: 100px;">
+                    <a class="nameshop" href="/">Kiton Gomas</a>
+                </div>
+                    <form style="display:inline" class="busca">
+                        <input id="b" type="text" placeholder="Digite o produto desejado">
+                    </form> 
+                <nav class="nav" style="display:inline">
+                    <a href="/" class="navbtn">Início</a>
+                    <a href="/pedidos" class="navbtn">Pedidos</a>  
+                    <a href="/painel" class="navbtn">Painel ADM</a>          
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="divPainel">
+        <ol class="ol">
+            <ul class="ul"><a href="/cadastrarClientes" class="btnPainel">Cadastrar Clientes</a></ul>
+            <ul class="ul"><a href="/cadastrarProdutos" class="btnPainel">Cadastrar Produtos</a></ul> 
+        </ol>
+        
+    </div>
+    
+</body>
+</html>
