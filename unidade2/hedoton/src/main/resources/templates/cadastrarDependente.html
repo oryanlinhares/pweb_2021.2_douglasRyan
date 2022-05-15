@@ -7,7 +7,7 @@
     <link th:href="@{/style/style.css}" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
-    <title>Kiton Gomas - Painel Administrativo</title>
+    <title>Kiton Gomas - Cadastrar dependentes</title>
 </head>
 <body>
     <header class="cabe">
@@ -28,13 +28,32 @@
             </div>
         </div>
     </header>
-    <div class="divPainel">
-            <a href="/cadastrarClientes" class="btnPainel">Cadastrar Clientes</a>
-            <a href="/cadastrarDependente" class="btnPainel">Cadastrar Dependente</a>
-            <a href="/cadastrarProdutos" class="btnPainel">Cadastrar Produtos</a>
-            <a href="/produtos" class="btnPainel">Listar Produtos</a>
-            <a href="/clientes" class="btnPainel">Listar Clientes</a>        
-    </div>
-    
+
+    <section>
+        <form>
+            <fieldset>
+                <div>
+                    <label for="nome"><strong>Nome*:</strong></label>
+                    <input type="text" placeholder="Xico" required>
+                </div>
+                <div>
+                    <label for="sobrenome"><strong>Sobrenome*:</strong></label>
+                    <input type="text" placeholder="Arruda" required>
+                </div>
+                <div>
+                    <label for="dataNascimento"><strong>Data de nascimento*:</strong></label>
+                    <input type="date" required>
+                </div>                
+                <div>
+                    <label><strong>Sexo*:</strong></label>
+                    <label><input type="radio" name="sexo" value="masculino" required>Masculino</label>
+                    <label><input type="radio" name="sexo" value="feminino">Feminino</label>
+                    <label><input type="radio" name="sexo" value="naoInformar">Não informar</label>
+                </div>
+            </fieldset>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+    </section>
 </body>
 </html>

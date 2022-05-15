@@ -9,7 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping
 public class PedidosController {
     @GetMapping("/pedidos")
-    public ModelAndView index(){
+    public ModelAndView listarPedidos(){
         ModelAndView mav = new ModelAndView("pedidos");
         return mav;
     }

@@ -65,7 +65,7 @@ table {
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
-    width: 6em
+    
 }
 
 .imgProduto {
@@ -113,7 +113,8 @@ table {
 }
 
 .divPainel{
-    right: 10px;
+    margin-top: 2%;
+    text-align: center;
 }
 
 .btnPainel{
@@ -124,8 +125,86 @@ table {
     margin-top: 10px;
     font-family: "Audiowide", sans-serif;
 }
-.ul{
-    padding-top: 20px;
-    padding-right: 80px;
+
+.btnPainel:hover{
+    text-decoration: none;
+    background: #79060c;
+    padding: 10px;
+    color: white;
+    margin-top: 10px;
+    font-family: "Audiowide", sans-serif;
+}
+
+.tabelaProdutos{
+    padding: .3rem;
+    border-collapse: collapse;
+    border-bottom: 1px solid #ddd;
+    
+}
+
+.rowC:hover {
+    background-color: #eee;
+}
+
+td{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: .5rem;
+}
+
+.tabela-cliente{
+    width: fit-content;
+}
+
+.formCCliente{
+    margin-top: 20px;
+    display: flex;
+    text-align: left;
+    margin: 0 auto; 
+}
+
+.scCliente{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.div-botoes {
+    margin-top: 2%;
+}
+
+.btnCC{
+    background-color: #B81118;
+    color: white;
+}
+
+.btnCC:hover{
+    background-color: #79060c;
+    color: white;
+    cursor: pointer;
+}
+
+.fdCliente{
+    background-color: #FFFFFF;
+    border: 1.5px solid rgb(211, 211, 211);
+    box-shadow: rgb(0 0 0 / 14%) 0px 6px 10px;
+    column-gap: 20px;
+    border-radius: 16px;
+    overflow: hidden;
+    padding: 1.5rem;
+
+}
+
+.inpCC{
     float: right;
+     width: 170px;
+}
+
+.divCC{
+    padding-bottom: .5rem;
+}
+
+#nasc{
+    padding: 1px 2px;
 }

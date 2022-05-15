@@ -8,6 +8,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import lombok.Data;
 
 @Data
@@ -18,6 +20,7 @@ public class PessoaCliente {
     @GeneratedValue(strategy = GenerationType.AUTO, generator="increment")
     private long id;
     private String nome;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date dataNascimento;
     private String genero;
     private String telefone;

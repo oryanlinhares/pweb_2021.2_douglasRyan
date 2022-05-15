@@ -8,8 +8,13 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 @RequestMapping
 public class PainelAdmController{
-    @GetMapping("/painel")
+    @GetMapping("/")
     public ModelAndView index(){
+        ModelAndView mav = new ModelAndView("index");
+        return mav;
+    }
+    @GetMapping("/painel")
+    public ModelAndView painel(){
         ModelAndView mav = new ModelAndView("painel");
         return mav;
     }
