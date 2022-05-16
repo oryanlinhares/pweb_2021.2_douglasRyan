@@ -29,52 +29,54 @@
         </div>
     </header>
 
-    <section>
-        <form th:action="@{/cadastrarProduto}" th:object="${produto}" th:method="post">
-            <fieldset>
-                <div>
+    <section class="scCliente">
+        <form class="formCCliente" th:action="@{/cadastrarProduto}" th:object="${produto}" th:method="post">
+            <fieldset class="fdCliente">
+                <div class="divCC">
                     <label><strong>Nome*:</strong></label>
-                    <input th:field="*{nomeProduto}" type="text" placeholder="KinderOvo" required>
+                    <input class="inpCC" th:field="*{nomeProduto}" type="text" placeholder="KinderOvo" required>
                 </div>
-                <div>
+                <div class="divCC">
                     <label><strong>Marca*:</strong></label>
-                    <input th:field="*{marca}" type="text" placeholder="Kinder" required>
+                    <input class="inpCC" th:field="*{marca}" type="text" placeholder="Kinder" required>
                 </div>
-                <div>
+                <div class="divCC">
                     <label><strong>Preço compra*:</strong></label>
-                    <input th:field="*{precoCompra}" type="text" placeholder="R$ 5,89" required>
+                    <input class="inpCC" th:field="*{precoCompra}" type="text" placeholder="R$ 5,89" required>
                 </div>
-                <div>
+                <div class="divCC">
                     <label><strong>Preço venda*:</strong></label>
-                    <input th:field="*{precoVenda}" type="text" placeholder="R$ 5,89" required>
+                    <input class="inpCC" th:field="*{precoVenda}" type="text" placeholder="R$ 5,89" required>
                 </div>
-                <div>
+                <div class="divCC">
                     <label><strong>Data de cadastro*:</strong></label>
-                    <input th:field="*{dataCadastro}" type="date" required>
+                    <input class="inpCC" th:field="*{dataCadastro}" type="date" required>
                 </div>
-                <div>
+                <div class="divCC">
                     <label><strong>Altura*:</strong></label>
-                    <input th:field="*{altura}" type="text" placeholder="5cm" required>
+                    <input class="inpCC" th:field="*{altura}" type="text" placeholder="5cm" required>
                 </div>
-                <div>
+                <div class="divCC">
                     <label><strong>Largura*:</strong></label>
-                    <input th:field="*{largura}" type="text" placeholder="8cm" required>
+                    <input class="inpCC" th:field="*{largura}" type="text" placeholder="8cm" required>
                 </div>
-                <div>
+                <div class="divCC">
                     <label><strong>Profundidade*:</strong></label>
-                    <input th:field="*{profundidade}" type="text" placeholder="7cm" required>
+                    <input class="inpCC" th:field="*{profundidade}" type="text" placeholder="7cm" required>
                 </div>
-                <div>
+                <div class="divCC">
                     <label><strong>Volume*:</strong></label>
-                    <input th:field="*{volume}" type="text" placeholder="10cm" required>
+                    <input class="inpCC" th:field="*{volume}" type="text" placeholder="10cm" required>
                 </div>
-                <div>
+                <div class="divCC">
                     <label><strong>Peso*:</strong></label>
-                    <input th:field="*{peso}" type="text" placeholder="40G" required>
+                    <input class="inpCC" th:field="*{peso}" type="text" placeholder="40G" required>
+                </div>
+                <div class="div-botoes">
+                    <button type="submit" class="btnCC">Cadastrar</button>
+                    <button type="reset" class="btnCC">Limpar</button>
                 </div>
             </fieldset>
-
-            <button type="submit">Cadastrar</button>
         </form>
     </section>
 </body>

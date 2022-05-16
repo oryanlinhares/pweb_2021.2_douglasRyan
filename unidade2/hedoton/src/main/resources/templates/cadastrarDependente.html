@@ -29,30 +29,32 @@
         </div>
     </header>
 
-    <section>
-        <form>
-            <fieldset>
-                <div>
+    <section class="scCliente">
+        <form class="formCCliente">
+            <fieldset class="fdCliente">
+                <div class="divCC">
                     <label for="nome"><strong>Nome*:</strong></label>
-                    <input type="text" placeholder="Xico" required>
+                    <input class="inpCC" type="text" placeholder="Xico" required>
                 </div>
-                <div>
+                <div class="divCC">
                     <label for="sobrenome"><strong>Sobrenome*:</strong></label>
-                    <input type="text" placeholder="Arruda" required>
+                    <input class="inpCC" type="text" placeholder="Arruda" required>
                 </div>
-                <div>
+                <div class="divCC">
                     <label for="dataNascimento"><strong>Data de nascimento*:</strong></label>
-                    <input type="date" required>
+                    <input class="inpCC" type="date" required>
                 </div>                
-                <div>
+                <div class="divCC">
                     <label><strong>Sexo*:</strong></label>
                     <label><input type="radio" name="sexo" value="masculino" required>Masculino</label>
                     <label><input type="radio" name="sexo" value="feminino">Feminino</label>
                     <label><input type="radio" name="sexo" value="naoInformar">Não informar</label>
                 </div>
+                <div class="div-botoes">
+                    <button type="submit" class="btnCC">Cadastrar</button>
+                    <button type="reset" class="btnCC">Limpar</button>
+                </div>
             </fieldset>
-
-            <button type="submit">Cadastrar</button>
         </form>
     </section>
 </body>
