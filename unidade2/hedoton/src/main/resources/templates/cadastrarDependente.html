@@ -22,7 +22,8 @@
                     </form> 
                 <nav class="nav" style="display:inline">
                     <a href="/" class="navbtn">Início</a>
-                    <a href="/pedidos" class="navbtn">Pedidos</a>  
+                    <a href="/pedidos" class="navbtn">Pedidos</a> 
+                    <a href="https://wa.me/5584981611503" class="navbtn" target="_blank">Fale conosco</a> 
                     <a href="/painel" class="navbtn">Painel ADM</a>          
                 </nav>
             </div>
@@ -30,30 +31,48 @@
     </header>
 
     <section>
-        <form>
+        <form th:action="@{/cadastrarDependente/{id}(id=${cadastrarDependente})}" th:object="${dependente}" th:method="post" th:if="${dependenteEdit == null}">
             <fieldset>
                 <div>
                     <label for="nome"><strong>Nome*:</strong></label>
-                    <input type="text" placeholder="Xico" required>
-                </div>
-                <div>
-                    <label for="sobrenome"><strong>Sobrenome*:</strong></label>
-                    <input type="text" placeholder="Arruda" required>
+                    <input th:field="*{nomeDep}" type="text" placeholder="Xico Arruda" required>
                 </div>
                 <div>
                     <label for="dataNascimento"><strong>Data de nascimento*:</strong></label>
-                    <input type="date" required>
+                    <input th:field="*{dataNascimentoDep}" type="date" required>
                 </div>                
-                <div>
+                <div class="divCC">
                     <label><strong>Sexo*:</strong></label>
-                    <label><input type="radio" name="sexo" value="masculino" required>Masculino</label>
-                    <label><input type="radio" name="sexo" value="feminino">Feminino</label>
-                    <label><input type="radio" name="sexo" value="naoInformar">Não informar</label>
+                    <label><input th:field="*{generoDep}" type="radio" name="genero" value="Masculino" required>Masculino</label>
+                    <label><input th:field="*{generoDep}" type="radio" name="genero" value="Feminino">Feminino</label>
+                    <label><input th:field="*{generoDep}" type="radio" name="genero" value="Não informar">Não informar</label>
                 </div>
             </fieldset>
 
             <button type="submit">Cadastrar</button>
         </form>
     </section>
+    <section>
+                <form th:action="@{/dependenteEdit/{id}(id=${dependenteEdit})}" th:object="${dependenteEdit}" th:method="get" th:if="${dependenteEdit != null}">
+                    <fieldset>
+                        <div>
+                            <label for="nome"><strong>Nome*:</strong></label>
+                            <input th:field="*{nomeDep}" type="text" placeholder="Xico Arruda" required>
+                        </div>
+                        <div>
+                            <label for="dataNascimento"><strong>Data de nascimento*:</strong></label>
+                            <input th:field="*{dataNascimentoDep}" type="date" required>
+                        </div>                
+                        <div>
+                            <label><strong>Sexo*:</strong></label>
+                            <label><input th:field="*{generoDep}" type="radio" name="sexo" value="masculino" required>Masculino</label>
+                            <label><input type="radio" name="sexo" value="feminino">Feminino</label>
+                            <label><input type="radio" name="sexo" value="naoInformar">Não informar</label>
+                        </div>
+                    </fieldset>
+        
+                    <button type="submit">Cadastrar</button>
+                </form>
+            </section>
 </body>
 </html>

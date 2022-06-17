@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-HedotonApplication<hedoton>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.pweb_2021_1.u2.hedoton.hedoton.HedotonApplication",
+            "projectName": "hedoton",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

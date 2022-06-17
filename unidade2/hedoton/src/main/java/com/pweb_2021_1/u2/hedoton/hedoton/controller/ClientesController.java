@@ -1,6 +1,8 @@
 package com.pweb_2021_1.u2.hedoton.hedoton.controller;
 
+import com.pweb_2021_1.u2.hedoton.hedoton.model.ClienteDep;
 import com.pweb_2021_1.u2.hedoton.hedoton.model.PessoaCliente;
+import com.pweb_2021_1.u2.hedoton.hedoton.repositories.ClienteDepRepository;
 import com.pweb_2021_1.u2.hedoton.hedoton.repositories.ClienteRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +12,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.bind.annotation.RequestParam;
 
 
 @Controller
@@ -19,6 +20,9 @@ public class ClientesController{
 
     @Autowired
     ClienteRepository clienteRepo;
+
+    @Autowired
+    ClienteDepRepository clienteDepRepo;
 
     @GetMapping("/cadastrarClientes")
     public ModelAndView cadastrarClientes(){
@@ -38,6 +42,8 @@ public class ClientesController{
     @GetMapping("/cadastrarDependente")
     public ModelAndView cadastrarDependente(){
         ModelAndView mav = new ModelAndView("cadastrarDependente");
+        ClienteDep novoDep = new ClienteDep();
+        mav.addObject("dependente", novoDep);
         return mav;
     }
 
@@ -49,9 +55,9 @@ public class ClientesController{
 
     @GetMapping("/editar/{id}")
     public ModelAndView editarCliente(@PathVariable Long id) throws Exception {
-        ModelAndView mav = new ModelAndView("cadastrarCliente");
+        ModelAndView mav = new ModelAndView("cadastrarClientes");
         PessoaCliente cliente = clienteRepo.findById(id).orElseThrow();
-        mav.addObject("cliente", cliente);
+        mav.addObject("clienteEdit", cliente);
         return mav;
     }
 
@@ -79,6 +85,17 @@ public class ClientesController{
         return "redirect:/clientes";
     }
     
-    
+    @GetMapping("/dependentes")
+    public ModelAndView ListarDependentes(){
+        ModelAndView mav = new ModelAndView("dependentes");
+        mav.addObject("dependentes", clienteDepRepo.findAll());
+        return mav;
+    }
+
+    @PostMapping("/cadastrarDependente")
+    public String cadastrarDependete(ClienteDep clienteDep){
+        clienteDepRepo.save(clienteDep);
+        return "redirect:/dependentes";
+    }
 
 }

@@ -23,6 +23,7 @@
                 <nav class="nav" style="display:inline">
                     <a href="/" class="navbtn">Início</a>
                     <a href="/pedidos" class="navbtn">Pedidos</a>  
+                    <a href="https://wa.me/5584981611503" class="navbtn" target="_blank">Fale conosco</a>
                     <a href="/painel" class="navbtn">Painel ADM</a>          
                 </nav>
             </div>
@@ -30,7 +31,7 @@
     </header>
 
     <section class="scCliente">
-        <form class="formCCliente" th:action="@{/cadastrarCliente}" th:object="${cliente}" th:method="post">
+        <form class="formCCliente" th:action="@{/cadastrarCliente}" th:object="${cliente}" th:method="post" th:if="${clienteEdit == null}">
             <fieldset class="fdCliente">
                 <div class="divCC">
                     <label for="nome"><strong>Nome completo*:</strong></label>
@@ -86,6 +87,63 @@
 
             
             
+        </form>
+    </section>
+    <section class="scCliente">
+        <form class="formCCliente" th:action="@{/editarCliente/{id}(id=${clienteEdit.id})}" th:object="${clienteEdit}" th:method="get" th:if="${clienteEdit != null}">
+            <fieldset class="fdCliente">
+                <div class="divCC">
+                    <label for="nome"><strong>Nome completo*:</strong></label>
+                    <input class="inpCC" th:field="*{nome}" type="text" placeholder="Xico Arruda" required>
+                </div>
+                <div class="divCC">
+                    <label for="email"><strong>Email*:</strong></label>
+                    <input class="inpCC" th:field="*{email}" type="email" placeholder="xicoarruda@ufersa.com" required>
+                </div>
+                <div class="divCC">
+                    <label for="dataNascimento"><strong>Data de nascimento*:</strong></label>
+                    <input class="inpCC" id="nasc" th:field="*{dataNascimento}" type="date" required>
+                </div>
+                <div class="divCC">
+                    <label for=""><strong>Telefone*:</strong></label>
+                    <input class="inpCC" th:field="*{telefone}" type="text" placeholder="(99)99999-9999" required>
+                </div>                
+                <div class="divCC">
+                    <label><strong>Sexo*:</strong></label>
+                    <label><input th:field="*{genero}" type="radio" name="genero" value="Masculino" required>Masculino</label>
+                    <label><input type="radio" name="genero" value="Feminino">Feminino</label>
+                    <label><input type="radio" name="genero" value="Não informar">Não informar</label>
+                </div>
+                <div class="divCC">
+                    <label><strong>Rua*:</strong></label>
+                    <input class="inpCC" th:field="*{rua}" type="text" placeholder="Angicos" required>
+                </div>
+                <div class="divCC">
+                    <label><strong>Numero da casa/apartamento*:</strong></label>
+                    <input class="inpCC" th:field="*{numeroDaCasa}" type="number" placeholder="68" required>
+                </div>
+                <div class="divCC">
+                    <label><strong>Bairro*:</strong></label>
+                    <input class="inpCC" th:field="*{bairro}" type="text" placeholder="Barreiras" required>
+                </div>
+                <div class="divCC">
+                    <label><strong>Cidade*:</strong></label>
+                    <input class="inpCC" th:field="*{cidade}" type="text" placeholder="Macau" required>
+                </div>
+                <div class="divCC">
+                    <label><strong>Estado*:</strong></label>
+                    <input class="inpCC" th:field="*{estado}" type="text" placeholder="RN" required>
+                </div>
+                <div class="divCC">
+                    <label><strong>CEP*:</strong></label>
+                    <input class="inpCC" th:field="*{cep}" type="text" placeholder="59500000" maxlength="8" required>
+                </div>
+                <div class="div-botoes">
+                    <button type="submit" class="btnCC">Cadastrar</button>
+                    <button type="reset" class="btnCC">Limpar</button>
+                </div>
+            </fieldset>
+  
         </form>
     </section>
 </body>

@@ -36,30 +36,20 @@
     </header>
 
     <div class="divP">
-        <table class="tabelaP">
+        <table class="tabelaP tabela-cliente">
             <tr class="rowP">
-                <th>Nome do Produto</th>
-                <th>Marca</th>
-                <th>Preço</th>
-                <th>Data de Cadastro</th>
-                <th>Altura</th>
-                <th>Largura</th>
-                <th>Profundidade</th>
-                <th>Volume</th>
-                <th>Peso</th>
+                <th>Nome do Dependente</th>
+                <th>Data de nascimento</th>
+                <th>Gênero</th>
             </tr>
-            <tr class="rowC" th:each="produto : ${produtos}">
-                <td th:text="${produto.nomeProduto}">Kinder ovo</td>
-                <td th:text="${produto.marca}">Kinder</td>
-                <td th:text="${produto.precoVenda}">R$ 5,89</td>
-                <td th:text="${produto.dataCadastro}">13/07/2023</td>
-                <td th:text="${produto.altura}">5cm</td>
-                <td th:text="${produto.largura}">8cm</td>
-                <td th:text="${produto.profundidade}">7cm</td>
-                <td th:text="${produto.volume}">10cm²</td>
-                <td th:text="${produto.peso}">40G</td>
-                <td><i class="bi bi-pencil-fill"></i></td>
-                <td><i class="bi bi-eraser-fill"></i></td>
+            <tr class="rowC" th:each="dependente : ${dependentes}">
+                <td th:text="${dependente.nomeDep}"></td>
+                <td th:text="${#dates.format(dependente.dataNascimentoDep, 'dd/MM/yyyy')}"></td>
+                <td th:text="${dependente.generoDep}"></td>
+                <td>
+                    <a th:href="@{/editar/{id}(id=${dependente.idDep})}"><i class="bi bi-pencil-fill"></i></a>
+                </td>
+                <td><a th:href="@{/excluir/{id}(id=${dependente.idDep})}"><i class="bi bi-eraser-fill"></i></a></td>
             </tr>
         </table>
     </div>
