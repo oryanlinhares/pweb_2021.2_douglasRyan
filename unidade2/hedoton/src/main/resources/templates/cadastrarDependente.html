@@ -7,6 +7,7 @@
     <link th:href="@{/style/style.css}" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="shortcut icon" href="/imagens/favicon.ico" type="image/x-icon">
     <title>Kiton Gomas - Cadastrar dependentes</title>
 </head>
 <body>
@@ -17,13 +18,14 @@
                 <div style="display:inline;margin-top: 100px;">
                     <a class="nameshop" href="/">Kiton Gomas</a>
                 </div>
-                    <form style="display:inline" class="busca">
-                        <input id="b" type="search" placeholder="Digite o produto desejado">
+                    <form style="display:inline" class="busca" method="post" th:action="@{/pesquisarProduto}">
+                        <input name="search" id="b" type="search" placeholder="Digite o produto desejado" >
+                        <i id="search" class="bi bi-search"></i>
                     </form> 
                 <nav class="nav" style="display:inline">
                     <a href="/" class="navbtn">Início</a>
-                    <a href="/pedidos" class="navbtn">Pedidos</a> 
-                    <a href="https://wa.me/5584981611503" class="navbtn" target="_blank">Fale conosco</a> 
+                    <a href="/pedidos" class="navbtn">Pedidos</a>  
+                    <a href="https://wa.me/5584981611503" class="navbtn" target="_blank">Fale conosco</a>
                     <a href="/painel" class="navbtn">Painel ADM</a>          
                 </nav>
             </div>
@@ -37,7 +39,7 @@
                     <label for="nome"><strong>Nome*:</strong></label>
                     <input th:field="*{nomeDep}" type="text" placeholder="Xico Arruda" required>
                 </div>
-                <div>
+                <div class="divCC">
                     <label for="dataNascimento"><strong>Data de nascimento*:</strong></label>
                     <input th:field="*{dataNascimentoDep}" type="date" required>
                 </div>                
@@ -47,9 +49,11 @@
                     <label><input th:field="*{generoDep}" type="radio" name="genero" value="Feminino">Feminino</label>
                     <label><input th:field="*{generoDep}" type="radio" name="genero" value="Não informar">Não informar</label>
                 </div>
+                <div class="div-botoes">
+                    <button type="submit" class="btnCC">Cadastrar</button>
+                    <button type="reset" class="btnCC">Limpar</button>
+                </div>
             </fieldset>
-
-            <button type="submit">Cadastrar</button>
         </form>
     </section>
     <section>
