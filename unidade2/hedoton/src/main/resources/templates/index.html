@@ -9,20 +9,20 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="/imagens/favicon.ico" type="image/x-icon">
 
     <title>Kiton Gomas - Inicio</title>
 </head>
 
 <body>
     <header class="cabe">
-
         <div class="red" style="height:50px">
             <div>
                 <div style="display:inline;margin-top: 100px;">
                     <a class="nameshop" href="/">Kiton Gomas</a>
                 </div>
-                    <form style="display:inline" class="busca">
-                        <input id="b" type="search" placeholder="Digite o produto desejado" >
+                    <form style="display:inline" class="busca" method="post" th:action="@{/pesquisarProduto}">
+                        <input name="search" id="b" type="search" placeholder="Digite o produto desejado" >
                         <i id="search" class="bi bi-search"></i>
                     </form> 
                 <nav class="nav" style="display:inline">

@@ -11,12 +11,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
     <link rel="shortcut icon" href="/imagens/favicon.ico" type="image/x-icon">
 
-    <title>Kiton Gomas - Listar produtos</title>
+    <title>Kiton Gomas - Pesquisa</title>
 </head>
 
 <body>
     <header class="cabe">
-
         <div class="red" style="height:50px">
             <div>
                 <div style="display:inline;margin-top: 100px;">
@@ -49,7 +48,7 @@
                 <th>Volume</th>
                 <th>Peso</th>
             </tr>
-            <tr class="rowC" th:each="produto : ${produtos}">
+            <tr class="rowC" th:each="produto : ${produto}">
                 <td th:text="${produto.nomeProduto}"></td>
                 <td th:text="${produto.marca}"></td>
                 <td th:text="${produto.precoVenda}"></td>
@@ -59,8 +58,6 @@
                 <td th:text="${produto.profundidade}"></td>
                 <td th:text="${produto.volume}"></td>
                 <td th:text="${produto.peso}"></td>
-                <td><i class="bi bi-pencil-fill"></i></td>
-                <td><i class="bi bi-eraser-fill"></i></td>
             </tr>
         </table>
     </div>

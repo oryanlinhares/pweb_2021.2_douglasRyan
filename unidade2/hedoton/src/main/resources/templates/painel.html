@@ -7,6 +7,7 @@
     <link th:href="@{/style/style.css}" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="shortcut icon" href="/imagens/favicon.ico" type="image/x-icon">
     <title>Kiton Gomas - Painel Administrativo</title>
 </head>
 <body>
@@ -17,13 +18,14 @@
                 <div style="display:inline;margin-top: 100px;">
                     <a class="nameshop" href="/">Kiton Gomas</a>
                 </div>
-                    <form style="display:inline" class="busca">
-                        <input id="b" type="search" placeholder="Digite o produto desejado">
+                    <form style="display:inline" class="busca" method="post" th:action="@{/pesquisarProduto}">
+                        <input name="search" id="b" type="search" placeholder="Digite o produto desejado" >
+                        <i id="search" class="bi bi-search"></i>
                     </form> 
                 <nav class="nav" style="display:inline">
                     <a href="/" class="navbtn">Início</a>
-                    <a href="/pedidos" class="navbtn">Pedidos</a> 
-                    <a href="https://wa.me/5584981611503" class="navbtn" target="_blank">Fale conosco</a> 
+                    <a href="/pedidos" class="navbtn">Pedidos</a>  
+                    <a href="https://wa.me/5584981611503" class="navbtn" target="_blank">Fale conosco</a>
                     <a href="/painel" class="navbtn">Painel ADM</a>          
                 </nav>
             </div>
